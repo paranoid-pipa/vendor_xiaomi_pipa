@@ -1,6 +1,6 @@
 multiCameraEnable=FALSE
-logInfoMask=0x0
-overrideLogLevels=0x1
+logInfoMask=0x10098
+overrideLogLevels=0x1F
 logConfigMask=0x0
 logWarningMask=0
 enableTxtLogging=0
@@ -35,7 +35,7 @@ FDPreprocessing=GTM
 FDFilterEngine=FD_Standard_ARM
 enableGPURotation=TRUE
 sessionMaxFlushWaitTime=2000
-raiserecoverysigabrt=FALSE
+raiserecoverysigabrt=TRUE
 quickviewsupport=TRUE
 enableCHIPartialData=1
 quickviewmask=0x501
@@ -61,4 +61,28 @@ dynamicFpsSupported=0@30|0@60
 # Bit[32 ~ 35] - DelayTime XX * 100 ms of MacroMode in Back Camera
 # Bit[36 ~ 39] - DelayTime XX * 100 ms of Bokeh HDR in Back Camera
 # Bit[40 ~ 63] - reserv
-QuickShotDelayTimeMask=0x2330220040033
+QuickShotDelayTimeMask=0x0220040033
+
+#Camera Log
+overrideLogLevels=0x1
+logInfoMask=0
+logWarningMask=0
+logConfigMask=0
+logVerboseMask=0
+logCoreCfgMask=0
+logRequestMapping=FALSE
+systemLogEnable=TRUE
+enableAsciiLogging=0
+enableTxtLogging=0
+offlineLogNumber=0
+offlinedebugmask=0
+enable3ADebugData=FALSE
+enableTuningMetadata=FALSE
+raiserecoverysigabrt=FALSE
+offlineLoggerEnableBackupLog=FALSE
+enableCameraCoreDumpBinary=FALSE
+enableCameraCoreDumpText=FALSE
+numConsecutiveRecovery=10
+#systrace
+traceGroupsEnable=0
+

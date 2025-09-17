@@ -54,5 +54,4 @@ WithoutSnapshotStream
     com.taobao.taobao
     com.tencent.mm
     com.eg.android.AlipayGphone
-    com.whatsapp
 }
