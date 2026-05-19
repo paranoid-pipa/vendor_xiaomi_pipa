@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
     libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
     libasphere \
+    libmisoundfx \
     libshoebox \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
