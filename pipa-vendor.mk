@@ -96,6 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pipa/proprietary/vendor/etc/configstore/vpp.configstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/configstore/vpp.configstore.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/displayconfig/display_id_4630946808805831297.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946808805831297.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/displayconfig/display_id_4630946922172900481.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946922172900481.xml \
+    vendor/xiaomi/pipa/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -113,6 +114,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
@@ -130,6 +132,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
+    vendor/xiaomi/pipa/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/xiaomi/pipa/proprietary/vendor/etc/qdcm_calib_data_xiaomi_m82_36_02_0a_video_mode_dual_dsi_dphy_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_xiaomi_m82_36_02_0a_video_mode_dual_dsi_dphy_panel.xml \
@@ -284,6 +287,7 @@ PRODUCT_PACKAGES += \
     libadsprpc \
     libc2d30_bltlib \
     libcdsprpc \
+    libdapparamstorage \
     libdiag \
     libfastcvdsp_stub \
     libfastcvopt \
@@ -305,6 +309,7 @@ PRODUCT_PACKAGES += \
     libvpphcp \
     libvpphvx \
     libvpplibrary \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
@@ -347,6 +352,7 @@ PRODUCT_PACKAGES += \
     libcapiv2svacnn \
     libcapiv2svarnn \
     libcapiv2vop \
+    libdeccfg \
     libdsd2pcm \
     libfastcrc \
     libgcs-calwrapper \
@@ -369,6 +375,8 @@ PRODUCT_PACKAGES += \
     libresampler \
     libsmwrapper \
     libssrec \
+    libstagefright_soft_ac4dec \
+    libstagefright_soft_ddpdec \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \
@@ -390,8 +398,11 @@ PRODUCT_PACKAGES += \
     libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
     libasphere \
+    libhwdap \
     libmisoundfx \
     libshoebox \
+    libswgamedap \
+    libswvqe \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
@@ -536,6 +547,7 @@ PRODUCT_PACKAGES += \
     libdisp-aba \
     libdisplayqos \
     libdisplayskuutils \
+    libdlbdsservice \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
@@ -656,6 +668,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-impl \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -750,6 +763,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     c2_manifest_vendor.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
+    manifest_vendor.dolby.hardware.dms.xml \
     adsprpcd \
     batterysecret \
     cdsprpcd \
@@ -764,6 +778,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service-qti \
     android.hardware.neuralnetworks@1.3-service-qti \
     vendor.display.color@1.0-service \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.qccvndhal@1.0-service \
