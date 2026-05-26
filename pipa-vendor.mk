@@ -315,7 +315,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
     btaudio_offload_if \
-    audio.primary.pipa \
+    audio.primary.kona \
     sound_trigger.primary.kona \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     libFileMux_proprietary \
@@ -336,7 +336,7 @@ PRODUCT_PACKAGES += \
     libOmxVideoDSMode \
     libOmxVpp \
     libOmxWmaDec \
-    liba2dpoffload_pipa \
+    liba2dpoffload \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
