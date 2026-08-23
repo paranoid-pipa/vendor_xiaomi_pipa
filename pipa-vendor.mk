@@ -282,7 +282,6 @@ PRODUCT_PACKAGES += \
     libC2D2 \
     libCB \
     libOpenCL \
-    libVkLayer_q3dtools \
     libadreno_utils \
     libadsprpc \
     libc2d30_bltlib \
@@ -291,7 +290,6 @@ PRODUCT_PACKAGES += \
     libdiag \
     libfastcvdsp_stub \
     libfastcvopt \
-    libgpudataproducer \
     libgsl \
     libllvm-glnext \
     libllvm-qcom \
@@ -829,13 +827,7 @@ PRODUCT_PACKAGES += \
     wfdservice
 
 PRODUCT_PACKAGES += \
-    system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so \
-    vendor_lib_libEGL_adreno_so \
-    vendor_lib_libGLESv2_adreno_so \
-    vendor_lib_libq3dtools_adreno_so \
-    vendor_lib64_libEGL_adreno_so \
-    vendor_lib64_libGLESv2_adreno_so \
-    vendor_lib64_libq3dtools_adreno_so
+    system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
