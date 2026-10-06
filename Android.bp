@@ -13584,6 +13584,102 @@ prebuilt_rfsa {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdolbyottcontrol",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdolbyottcontrol.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+                "libGLESv3",
+                "libEGL",
+                "libc",
+                "libm",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdolbyottcontrol.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libGLESv3",
+                "libEGL",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdovi_omx",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/libdovi_omx.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libEGL",
+                "libGLESv2",
+                "libgui",
+                "libui",
+                "libutils",
+                "libstagefright_foundation",
+                "libhardware",
+                "libbinder",
+                "libcutils",
+                "libdolbyottcontrol",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libdovi_omx.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libEGL",
+                "libGLESv2",
+                "libgui",
+                "libui",
+                "libutils",
+                "libstagefright_foundation",
+                "libhardware",
+                "libbinder",
+                "libcutils",
+                "libdolbyottcontrol",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.dpm.api@1.0",
     owner: "xiaomi",
     strip: {

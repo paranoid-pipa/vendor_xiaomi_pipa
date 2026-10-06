@@ -97,6 +97,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/pipa/proprietary/vendor/etc/displayconfig/display_id_4630946808805831297.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946808805831297.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/displayconfig/display_id_4630946922172900481.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946922172900481.xml \
     vendor/xiaomi/pipa/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/xiaomi/pipa/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/pipa/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -732,6 +733,8 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_misound_res_headphone_bin \
     vendor_lib_rfsa_adsp_misound_res_spk_bin \
     vendor_lib_rfsa_adsp_misound_res_spk4ch_bin \
+    libdolbyottcontrol \
+    libdovi_omx \
     com.qualcomm.qti.dpm.api@1.0 \
     libdiag_system \
     libdpmctmgr \
